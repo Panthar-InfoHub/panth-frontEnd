@@ -2,16 +2,16 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
-      <header style={{ padding: "1rem" }}>
-        <Image src="/logo.svg" alt="Logo" width={50} height={50} />
+    <div className="h-screen flex flex-col" >
+      <header className="p-4">
+        <Image src="/logo.svg" alt="Logo" width={144} height={35} />
       </header>
       <main className="flex-1 flex flex-col justify-center items-center text-center">
-        
-        <p style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
+
+        <p className="text-2xl font-bold">
           We are under development.
         </p>
-        <p style={{ fontSize: "1rem", marginTop: "1rem" }}>
+        <p className="mt-4 text-xl">
           Contact us at: <a href="mailto:pantharinfohub121@gmail.com">pantharinfohub121@gmail.com</a>
         </p>
       </main>
