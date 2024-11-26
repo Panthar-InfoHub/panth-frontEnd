@@ -48,6 +48,10 @@ html {
     @apply font-medium text-[20px];
   }
 
+  .text-large-medium {
+    @apply font-medium text-2xl;
+  }
+
   .text-xl-medium {
     @apply font-medium text-xl;
   }
@@ -96,6 +100,10 @@ html {
     @apply font-medium text-[20px] sm:text-[4rem] text-center break-words;
   }
 
+  .small-heading {
+    @apply font-medium text-[20px] sm:text-[2rem] break-words;
+  }
+
   .section_container {
     @apply py-10 max-w-[90%] mx-auto;
   }
@@ -134,13 +142,17 @@ html {
     @apply rounded-full bg-black-2 !important;
   }
 
-  .book_btn{
-    @apply rounded-3xl bg-black-3 sm:px-10 tracking-wider sm:py-8 text-xl text-white p-5  !important;
+  .book_btn {
+    @apply rounded-3xl bg-black-3 sm:px-10 tracking-wider sm:py-8 text-xl text-white p-5 !important;
   }
 
   /* ================== HOME DIV ===================== */
   .container {
     @apply relative max-w-7xl mx-auto;
+  }
+
+  .footer_input {
+    @apply flex-1 px-3 py-4 rounded-3xl font-semibold placeholder:font-semibold placeholder:text-grey-3 w-full h-auto outline-none;
   }
 
   .homediv {
@@ -150,10 +162,6 @@ html {
   .card_li {
     @apply bg-white shadow-drop-3 flex justify-between items-start p-10 rounded-2xl gap-5 cursor-pointer;
   }
-
-  /* .card_container {
-    @apply p-10;
-  } */
 
   .home_subdiv {
     @apply border-t border-t-black-2 w-full pt-4 flex-col sm:flex-row flex justify-between items-center;
@@ -259,11 +267,32 @@ html {
     @apply flex overflow-hidden min-h-[50px] flex-1 items-center gap-3 bg-black-3 text-bg-white data-[state=active]:bg-black-hover data-[state=active]:text-grey-2 !important;
   }
 
-  .caption {
-    @apply text-[12px] leading-[16px] font-normal;
+  .parent_btn {
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
   }
 
-  .tag-tri {
-    @apply before:content-[''] before:absolute before:top-2 before:left-2 before:border-t-[10px] before:border-t-black before:border-r-[10px] before:border-r-transparent after:content-[''] after:absolute after:bottom-2 after:right-2 after:border-b-[10px] after:border-b-black after:border-l-[10px] after:border-l-transparent;
+  .animate_btn {
+    transform: rotateX(-90deg) translateY(15px) ;
+    transform-origin: bottom center;
+    opacity: 0;
+    position: absolute;
+  }
+
+  .hover_parent_btn {
+    transform: rotateX(90deg);
+  }
+
+  .hover_first_animate_btn {
+    transform: rotateY(-100%);
+    opacity: 0;
+  }
+
+  .hover_animate_btn {
+    opacity: 1;
+  }
+
+  .caption {
+    @apply text-[12px] leading-[16px] font-normal;
   }
 }

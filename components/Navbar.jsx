@@ -2,6 +2,7 @@ import { navItem } from "@/lib/data"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "./ui/button"
+import CustomButton from "./CustomUi/Button"
 
 const Navbar = () => {
 
@@ -14,8 +15,9 @@ const Navbar = () => {
 
         <div className="flex items-center justify-evenly text-black-1 flex-1">
           {navItem.map((item, index) => (
+
             <Link href="#" key={index} >
-              <span className="max-sm:hidden uppercase text-xs text-black-2" > {item.name} </span>
+              <CustomButton text={item.name} />
             </Link>
           ))}
         </div>

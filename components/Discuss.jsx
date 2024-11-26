@@ -1,5 +1,4 @@
-import React from 'react'
-import { Button } from './ui/button'
+import CustomButton from './CustomUi/Button'
 
 const Discuss = () => {
     return (
@@ -15,9 +14,9 @@ const Discuss = () => {
                 </div>
 
                 <div className='min-w-[14rem]' >
-                    <Button className="book_btn" >
-                        BOOK A CALL
-                    </Button>
+                    <button className="book_btn text-white" >
+                        <CustomButton text="BOOK A CALL" />
+                    </button>
                 </div>
             </div>
         </section>

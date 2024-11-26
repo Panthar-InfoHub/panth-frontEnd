@@ -1,5 +1,4 @@
 import { services } from "@/lib/data"
-import Image from "next/image"
 
 const ServicesLayout = () => {
   return (

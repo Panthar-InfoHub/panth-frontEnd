@@ -1,4 +1,5 @@
 import Discuss from "@/components/Discuss";
+import Footer from "@/components/Footer";
 import OurBenefit from "@/components/Layout/OurBenefit";
 import OurWorkLayout from "@/components/Layout/OurServiceLayout";
 import ReviewLayout from "@/components/Layout/ReviewLayout";
@@ -51,7 +52,7 @@ export default function Home() {
       <OurWorkLayout />
       <OurBenefit />
       <Discuss />
-
+      <Footer />
     </>
   );
 }
