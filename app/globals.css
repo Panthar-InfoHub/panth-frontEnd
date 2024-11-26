@@ -3,19 +3,267 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-poppins: 'Poppins';
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ededed;
-    --foreground: #0a0a0a;
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+@layer utilities {
+  .flex-between {
+    @apply flex justify-between items-center;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+
+  .text-30-extrabold {
+    @apply text-[30px] font-extrabold;
+  }
+
+  .text-30-bold {
+    @apply text-[30px] font-bold;
+  }
+
+  .text-30-semibold {
+    @apply font-semibold text-[30px];
+  }
+
+  .text-26-semibold {
+    @apply font-semibold text-[26px];
+  }
+
+  .text-24 {
+    @apply text-[24px] font-semibold;
+  }
+
+  .text-20-medium {
+    @apply font-medium text-[20px];
+  }
+
+  .text-xl-medium {
+    @apply font-medium text-xl;
+  }
+
+  .text-small-medium {
+    @apply font-medium text-base;
+  }
+
+  .text-small-normal {
+    @apply font-normal text-base;
+  }
+
+  .text-16-medium {
+    @apply font-medium text-[16px];
+  }
+
+  .text-14-medium {
+    @apply font-medium text-[14px];
+  }
+
+  .text-12-normal {
+    @apply font-medium text-[12px] !important;
+  }
+
+  .founder_text {
+    @apply text-2xl sm:text-4xl leading-[1.5];
+  }
+
+  .grey_container {
+    @apply w-full bg-transparent min-h-[530px] pattern flex justify-center items-center flex-col py-10 px-6 z-10;
+  }
+
+  .tag {
+    @apply bg-grey-3 px-6 py-3 font-work-sans font-bold rounded-sm uppercase relative tag-tri;
+  }
+
+  .heading {
+    @apply uppercase font-bold text-black-3 sm:text-[6rem] sm:leading-[1] text-[32px] leading-[46px];
+  }
+
+  .benefit_heading {
+    @apply font-medium uppercase sm:text-[4rem] sm:leading-[1] text-[2.5rem] leading-[30px] text-center break-words;
+  }
+
+  .sub-heading {
+    @apply font-medium text-[20px] sm:text-[4rem] text-center break-words;
+  }
+
+  .section_container {
+    @apply py-10 max-w-[90%] mx-auto;
+  }
+
+  .home_container {
+    @apply py-10 max-w-[92%] m-auto;
+  }
+
+  .card_grid {
+    @apply grid md:grid-cols-4 sm:grid-cols-2 gap-5;
+  }
+
+  .card_grid-sm {
+    @apply grid sm:grid-cols-2 gap-5;
+  }
+
+  .no-result {
+    @apply text-black-100 text-sm font-normal;
+  }
+
+  /* idea details */
+  .divider {
+    @apply border-dotted bg-zinc-400 max-w-full my-10 mx-auto;
+  }
+
+  .view_skeleton {
+    @apply bg-zinc-400 h-10 w-24 rounded-lg fixed bottom-3 right-3;
+  }
+
+  /* navbar */
+  .header {
+    @apply px-5 py-3 shadow-sm border-b-2 border-black-1 border-t-2;
+  }
+
+  .contact-btn {
+    @apply rounded-full bg-black-2 !important;
+  }
+
+  .book_btn{
+    @apply rounded-3xl bg-black-3 sm:px-10 tracking-wider sm:py-8 text-xl text-white p-5  !important;
+  }
+
+  /* ================== HOME DIV ===================== */
+  .container {
+    @apply relative max-w-7xl mx-auto;
+  }
+
+  .homediv {
+    @apply flex justify-center items-center flex-col px-16 py-14 sm:px-[5.5rem] sm:py-16 z-10 h-[110%] w-full overflow-hidden;
+  }
+
+  .card_li {
+    @apply bg-white shadow-drop-3 flex justify-between items-start p-10 rounded-2xl gap-5 cursor-pointer;
+  }
+
+  /* .card_container {
+    @apply p-10;
+  } */
+
+  .home_subdiv {
+    @apply border-t border-t-black-2 w-full pt-4 flex-col sm:flex-row flex justify-between items-center;
+  }
+
+  .circle {
+    @apply w-8 h-8 rounded-full bg-grey-1;
+  }
+
+  .review_card {
+    @apply bg-grey-1 p-10 mask_review_card flex flex-col w-full gap-12 cursor-grab;
+  }
+
+  .benefit_card {
+    @apply p-10 mask_benefit_card flex flex-col w-full h-full min-h-[15rem] gap-12 cursor-grab;
+  }
+
+  .discuss_card {
+    @apply p-10 mask_discuss_card flex flex-col w-full h-full min-h-[15rem] gap-12;
+  }
+
+  .work_card {
+    @apply bg-grey-1 p-10 mask_work_card flex w-[42rem] min-h-[32rem] justify-self-end;
+  }
+
+  .swiper_btn {
+    @apply w-12 h-12 rounded-full border-black-3 cursor-pointer hover:bg-black-3 transition-all duration-200 border flex-center;
+  }
+
+  .mask_discuss_card {
+    background-image: url("/bg/rectangle_bg.png");
+    background-size: 100% 100%;
+    background-position: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .mask_benefit_card {
+    background-image: url("/bg/benefit_bg.webp");
+    background-size: 100% 100%;
+    background-position: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .mask_review_card {
+    mask-image: url("/bg/review_bg.webp");
+    mask-size: 100% 100%;
+  }
+
+  .mask_work_card {
+    mask-image: url("/bg/work_card.png");
+    mask-size: 100% 100%;
+  }
+
+  .service_bg {
+    background-image: url("/bg/service_bg.png");
+    background-size: 100% 100%;
+    background-position: 0 0, 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .hero_first {
+    background-image: url("/bg-2.webp");
+    background-size: 100% 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  /* ================= SWIPER =========================== */
+  .collab_circle {
+    @apply aspect-square w-2/3 flex self-start justify-self-start rounded-full bg-grey-1;
+  }
+
+  .nav-icon {
+    @apply w-6 filter invert opacity-25 !important;
+  }
+
+  .nav-icon-active {
+    @apply invert-0 opacity-100 !important;
+  }
+
+  /* view */
+  .view-container {
+    @apply flex justify-end items-center mt-5 fixed bottom-3 right-3;
+  }
+
+  .add-container {
+    @apply flex justify-center items-center fixed bottom-3 rounded-full right-1/2;
+  }
+
+  .view-text {
+    @apply font-medium text-[16px] bg-black-2 text-white-1 px-4 py-2 rounded-lg capitalize hover:bg-black-hover duration-200 transition-all;
+  }
+
+  .category-tag {
+    @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-full;
+  }
+
+  .join-btn {
+    @apply font-medium text-[16px] bg-black-3 text-grey-4 px-4 py-2 rounded-full hover:bg-black-hover transition-all duration-200;
+  }
+
+  .tab {
+    @apply flex overflow-hidden min-h-[50px] flex-1 items-center gap-3 bg-black-3 text-bg-white data-[state=active]:bg-black-hover data-[state=active]:text-grey-2 !important;
+  }
+
+  .caption {
+    @apply text-[12px] leading-[16px] font-normal;
+  }
+
+  .tag-tri {
+    @apply before:content-[''] before:absolute before:top-2 before:left-2 before:border-t-[10px] before:border-t-black before:border-r-[10px] before:border-r-transparent after:content-[''] after:absolute after:bottom-2 after:right-2 after:border-b-[10px] after:border-b-black after:border-l-[10px] after:border-l-transparent;
+  }
 }
