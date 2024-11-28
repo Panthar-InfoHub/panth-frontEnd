@@ -5,7 +5,6 @@ const config = {
 		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
 		"./components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./app/**/*.{js,ts,jsx,tsx,mdx}",
-		"./sanity/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
 		extend: {
@@ -25,7 +24,7 @@ const config = {
 				'bg-white': '#FFFDF6',
 				'white-1': '#f5f5f5',
 				'grey-1': '#c6c6c6',
-				'grey-2': '#e1e1e1',
+				'grey-2': '#d9d9d9',
 				'grey-3': '#ececec',
 				'grey-4': '#fafafa',
 				'black-1': '#0a0a0a',

@@ -4,7 +4,7 @@ import LenisDiv from "@/lib/LenisDiv";
 export default function RootLayout({ children }) {
     return (
         <LenisDiv>
-            <main className="px-4 py-2 flex flex-col gap-8" >
+            <main className="pt-2 bg-[#FAF9F6] flex flex-col gap-8 w-screen overflow-hidden" >
                 <Navbar />
                 {children}
             </main>

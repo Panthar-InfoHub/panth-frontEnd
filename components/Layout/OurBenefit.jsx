@@ -7,24 +7,21 @@ const OurBenefit = () => {
 
     const benefits = [
         {
-            title: "$520M",
-            description: " To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase. To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase. To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase."
+            title: "SURAKSHA KAWACH",
+            description: [
+                { text: "SURAKSHA KAWACH is a unique security system that provides real-time protection with quick warnings and location tracking. It smoothly integrates technology with safety, establishing a new standard for personal and societal security." }
+            ]
         },
         {
-            title: "$520M",
-            description: " To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase. To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase. To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase."
-        },
-        {
-            title: "$520M",
-            description: " To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase. To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase. To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase."
-        },
-        {
-            title: "$520M",
-            description: " To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase. To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase. To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase."
-        },
-        {
-            title: "$520M",
-            description: " To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase. To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase. To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase."
+            title: "KEY FEATURES",
+            description: [
+                { text: "Real-Time Alerts" },
+                { text: "Panic Button" },
+                { text: "AI Threat Detection" },
+                { text: "Geo-Fencing" },
+                { text: "Secure Communication" },
+                { text: "Law Enforcement Integration" },
+            ],
         },
     ]
 
@@ -33,33 +30,36 @@ const OurBenefit = () => {
 
             <div className='flex flex-col gap-20' >
                 <div>
-                    <h3 className="heading"> OUR <br /> BENEFITS </h3>
+                    <h3 className="main_heading"> OUR <br /> BENEFITS </h3>
                 </div>
 
-                <div className='gap-3 hidden sm:flex ' >
-                    <div className="review_card flex-[0.25] ">
+                <div className='gap-5 flex' >
+                    <div className="review_card flex-[0.3] !hidden md:!flex">
                         <div>
                             <div className='flex gap-4 pb-5' >
                                 <div className='benefit_heading' >
-                                    <Image src="/user/user-1.jpeg" alt='profile' width={48} height={48} className='rounded-full'  />
+                                    <Image src="/user/abhay.jpg" alt='profile' width={48} height={48} className='rounded-full' />
                                 </div>
                             </div>
-                            <p className='text-xl-medium' >
-                                To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase. To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase. To Lay a solid foundation for the creative process that follows, we begin our journey with the discovery phase.
+                            <p className='text-xl-medium !font-normal ' >
+                                <span className='font-semibold' > Panthar Infohub Pvt. Ltd. </span> redefines security with innovative solutions like <span className='font-semibold' > SURAKSHA KAWACH </span>, which improves family and community safety. By combining cutting-edge technology and a commitment to social impact, the company helps the government increase public safety. It is led by the world's youngest CEO and encourages creativity and change, winning global recognition for its pioneering contributions to a safer, smarter future.
                             </p>
                         </div>
                     </div>
 
                     {/* SWIPER */}
-                    <Swiper spaceBetween={30} slidesPerView={2} className='w-full h-auto flex-[0.7] !mx-0 ' loop={true} >
+                    <Swiper spaceBetween={30} slidesPerView={1.5} className='w-full h-auto flex-1 md:flex-[0.7] !mx-0 ' >
                         {benefits.map((benefit, index) => (
-                            <SwiperSlide key={index} className='relative'  >
+                            <SwiperSlide key={index} className='relative max-w-[22rem] min-w-[15rem]'  >
                                 <div className="benefit_card">
-                                    <div>
-                                        <div className='flex gap-4 pb-6 border-b-2 border-b-grey-1 mb-8' >
-                                            <div className='benefit_heading' > {benefit.title} </div>
-                                        </div>
-                                        <p className='text-small-medium' > {benefit.description} </p>
+                                    <div className='flex gap-4 pb-6 border-b-2 border-b-grey-1 mb-8' >
+                                        <div className='benefit_heading' > {benefit.title} </div>
+                                    </div>
+
+                                    <div className='flex flex-col gap-4' >
+                                        {benefit.description.map((item, index) => (
+                                            <p className='text-xl-medium' key={index} > {item.text} </p>
+                                        ))}
                                     </div>
                                 </div>
                             </SwiperSlide>

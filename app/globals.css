@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-poppins: 'Poppins';
+  --font-poppins: 'Roboto Slab';
 }
 
 body::-webkit-scrollbar {
@@ -41,7 +41,7 @@ html {
   }
 
   .text-24 {
-    @apply text-[24px] font-semibold;
+    @apply text-[20px] md:text-[24px] font-semibold;
   }
 
   .text-20-medium {
@@ -53,11 +53,11 @@ html {
   }
 
   .text-xl-medium {
-    @apply font-medium text-xl;
+    @apply font-medium text-xs md:text-xl;
   }
 
   .text-small-medium {
-    @apply font-medium text-base;
+    @apply font-medium text-xs md:text-base;
   }
 
   .text-small-normal {
@@ -77,31 +77,27 @@ html {
   }
 
   .founder_text {
-    @apply text-2xl sm:text-4xl leading-[1.5];
-  }
-
-  .grey_container {
-    @apply w-full bg-transparent min-h-[530px] pattern flex justify-center items-center flex-col py-10 px-6 z-10;
-  }
-
-  .tag {
-    @apply bg-grey-3 px-6 py-3 font-work-sans font-bold rounded-sm uppercase relative tag-tri;
+    @apply text-2xl sm:text-4xl leading-[1] flex flex-wrap;
   }
 
   .heading {
-    @apply uppercase font-bold text-black-3 sm:text-[6rem] sm:leading-[1] text-[32px] leading-[46px];
+    @apply uppercase font-bold text-black-3 sm:text-[3rem] sm:leading-[1.3] md:text-[4.5rem] text-[2.5rem] leading-[1];
+  }
+
+  .main_heading {
+    @apply uppercase font-bold text-black-3 sm:text-[6rem] sm:leading-[1] md:text-[4.5rem] text-[3rem] leading-[46px];
   }
 
   .benefit_heading {
-    @apply font-medium uppercase sm:text-[4rem] sm:leading-[1] text-[2.5rem] leading-[30px] text-center break-words;
+    @apply font-medium text-left text-[1.5rem] xs:text-[2rem] uppercase sm:text-[2.5rem] sm:leading-[1] leading-[30px] break-words;
   }
 
   .sub-heading {
-    @apply font-medium text-[20px] sm:text-[4rem] text-center break-words;
+    @apply font-medium text-[2rem] sm:text-[4rem] text-center break-words;
   }
 
   .small-heading {
-    @apply font-medium text-[20px] sm:text-[2rem] break-words;
+    @apply font-medium text-[1.5rem] md:text-[2rem] break-words;
   }
 
   .section_container {
@@ -109,7 +105,7 @@ html {
   }
 
   .home_container {
-    @apply py-10 max-w-[92%] m-auto;
+    @apply md:py-10 w-[92%] m-auto;
   }
 
   .card_grid {
@@ -143,7 +139,7 @@ html {
   }
 
   .book_btn {
-    @apply rounded-3xl bg-black-3 sm:px-10 tracking-wider sm:py-8 text-xl text-white p-5 !important;
+    @apply rounded-3xl bg-black-3 sm:px-8 tracking-wider sm:py-4 md:text-xl text-base text-white p-4 !important;
   }
 
   /* ================== HOME DIV ===================== */
@@ -156,27 +152,38 @@ html {
   }
 
   .homediv {
-    @apply flex justify-center items-center flex-col px-16 py-14 sm:px-[5.5rem] sm:py-16 z-10 h-[110%] w-full overflow-hidden;
+    @apply flex home_card bg-white/70 backdrop-blur-xl justify-evenly items-center min-h-[20rem] flex-col px-7 py-10 md:px-[4.5rem] sm:py-12 w-full overflow-hidden;
   }
 
   .card_li {
-    @apply bg-white shadow-drop-3 flex justify-between items-start p-10 rounded-2xl gap-5 cursor-pointer;
+    @apply bg-white shadow-drop-3 flex justify-between items-start p-4 md:p-10 rounded-2xl gap-5 cursor-pointer;
   }
 
   .home_subdiv {
-    @apply border-t border-t-black-2 w-full pt-4 flex-col sm:flex-row flex justify-between items-center;
+    @apply border-t border-t-black-2 w-full pt-4 flex-col gap-4 sm:flex-row flex justify-between;
   }
 
   .circle {
     @apply w-8 h-8 rounded-full bg-grey-1;
   }
 
+  .service_circle {
+    @apply md:w-12 md:h-12 min-w-[2rem] min-h-[2rem] rounded-full border bg-black-hover text-grey-3 flex-center;
+  }
+  .service_circle_arrow {
+    @apply md:w-12 md:h-12 min-w-[2rem] min-h-[2rem] rounded-full border border-black-3 duration-300 transition-all ;
+  }
+
+  .achievement_circle {
+    @apply min-w-[10rem] min-h-[10rem] md:w-[12rem] md:h-[12rem] rounded-full bg-transparent;
+  }
+
   .review_card {
-    @apply bg-grey-1 p-10 mask_review_card flex flex-col w-full gap-12 cursor-grab;
+    @apply bg-[#D9D9D9] px-4 py-6 md:p-10 mask_review_card flex flex-col w-full gap-8 md:gap-12 cursor-grab;
   }
 
   .benefit_card {
-    @apply p-10 mask_benefit_card flex flex-col w-full h-full min-h-[15rem] gap-12 cursor-grab;
+    @apply p-6 md:p-10 mask_benefit_card flex flex-col w-full h-full min-h-[15rem] cursor-grab;
   }
 
   .discuss_card {
@@ -184,7 +191,7 @@ html {
   }
 
   .work_card {
-    @apply bg-grey-1 p-10 mask_work_card flex w-[42rem] min-h-[32rem] justify-self-end;
+    @apply bg-grey-1 mask_work_card flex w-full min-h-[22rem] md:w-[42rem] md:min-h-[32rem] justify-self-end;
   }
 
   .swiper_btn {
@@ -193,6 +200,12 @@ html {
 
   .mask_discuss_card {
     background-image: url("/bg/rectangle_bg.png");
+    background-size: 100% 100%;
+    background-position: 100%;
+    background-repeat: no-repeat;
+  }
+  .home_card {
+    background-image: url("/bg/bg-2.png");
     background-size: 100% 100%;
     background-position: 100%;
     background-repeat: no-repeat;
@@ -230,8 +243,13 @@ html {
   }
 
   /* ================= SWIPER =========================== */
+
+  .author_pfp {
+    @apply rounded-full w-8 h-8 md:w-14 md:h-14;
+  }
+
   .collab_circle {
-    @apply aspect-square w-2/3 flex self-start justify-self-start rounded-full bg-grey-1;
+    @apply aspect-square min-w-[10rem] w-2/3 flex self-start justify-self-start rounded-full bg-grey-1;
   }
 
   .nav-icon {
@@ -251,14 +269,6 @@ html {
     @apply flex justify-center items-center fixed bottom-3 rounded-full right-1/2;
   }
 
-  .view-text {
-    @apply font-medium text-[16px] bg-black-2 text-white-1 px-4 py-2 rounded-lg capitalize hover:bg-black-hover duration-200 transition-all;
-  }
-
-  .category-tag {
-    @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-full;
-  }
-
   .join-btn {
     @apply font-medium text-[16px] bg-black-3 text-grey-4 px-4 py-2 rounded-full hover:bg-black-hover transition-all duration-200;
   }
@@ -273,7 +283,7 @@ html {
   }
 
   .animate_btn {
-    transform: rotateX(-90deg) translateY(15px) ;
+    transform: rotateX(-90deg) translateY(15px);
     transform-origin: bottom center;
     opacity: 0;
     position: absolute;
@@ -284,7 +294,7 @@ html {
   }
 
   .hover_first_animate_btn {
-    transform: rotateY(-100%);
+    transform: translateY(-100%);
     opacity: 0;
   }
 
@@ -292,7 +302,57 @@ html {
     opacity: 1;
   }
 
-  .caption {
-    @apply text-[12px] leading-[16px] font-normal;
+  .circleBlob{
+    content: "";
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    z-index: -1;
+  }
+  .circleBlob2 {
+    content: "";
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;  /* Use percentage or px values */
+    left: 50%; /* Use percentage or px values */
+    transform: translate(-50%, -50%); /* To center it properly */
+    background-color: red;
+    z-index: -1;
+  }
+
+  /* MOBILE NAVIGATION */
+
+  .hamBurger:before,
+  .hamBurger:after,
+  .hamBurger .inner {
+    background: #1F2127;
+    content: "";
+    display: block;
+    height: 5px;
+    border-radius: 3px;
+    margin: 7px 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  .hamBurger:hover:before {
+    transform: translateY(12px) rotate(135deg);
+    background: white;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hamBurger:hover:after {
+    background: white;
+    transform: translateY(-12px) rotate(-135deg);
+  }
+
+  .hamBurger:hover .inner {
+    transform: scale(0);
   }
 }

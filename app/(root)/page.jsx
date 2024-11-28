@@ -5,23 +5,22 @@ import OurWorkLayout from "@/components/Layout/OurServiceLayout";
 import ReviewLayout from "@/components/Layout/ReviewLayout";
 import SecondLayout from "@/components/Layout/SecondLayout";
 import ServicesLayout from "@/components/Layout/ServicesLayout";
-import { SwiperComponent } from "@/components/Swiper/Swiper";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+// import Video from 'next-video';
+// import surakSha from '@/videos/suraksha.mp4';
 
 export default function Home() {
   return (
     <>
       <section className="home_container flex h-screen" >
-        <div className="flex gap-5 flex-col sm:flex-row w-full" >
+        <div className="flex gap-5 flex-col md:flex-row w-full relative" >
 
           <div className="homediv relative gap-4" >
-            <Image src={"/bg/bg-2.webp"} alt="background" fill={true} className=" !z-[-1]" quality={100} />
 
             <h1 className="heading" >
-              <span> LETS BUILD </span>
+              <span> Enabling Secure  </span>
               <br />
-              <span> THE NEXT SMART THING </span>
+              <span>Futures with smart tech </span>
             </h1>
 
             <div className="home_subdiv" >
@@ -37,17 +36,24 @@ export default function Home() {
           </div>
 
           {/* // HOME SECOND DIV */}
-          <div className="w-1/3 bg-grey-1 rounded-xl " >
-            <h1> TEST </h1>
+          <div className=" bg-grey-2 rounded-3xl min-h-[22rem] md:w-[40%] overflow-hidden " >
+
+            <div>
+              <h3 className="small-heading p-6 uppercase" > Product Development </h3>
+            </div>
+
+            <video autoPlay={true} muted loop className="" >
+              <source src="/videos/suraksha.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
 
           </div>
-
         </div>
       </section>
 
       <SecondLayout />
       <ServicesLayout />
-      <SwiperComponent />
+      {/* <SwiperComponent /> */}
       <ReviewLayout />
       <OurWorkLayout />
       <OurBenefit />

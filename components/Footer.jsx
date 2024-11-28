@@ -46,10 +46,10 @@ const Footer = () => {
     ]
 
     return (
-        <footer className='px-10 py-28 bg-black-3 flex justify-center flex-col' >
+        <footer className='px-10 pt-28 pb-8 bg-black-2 flex justify-center flex-col gap-8' >
             <div className='w-full flex justify-start' >
 
-                <div className='flex sm:flex-row flex-col justify-between items-start flex-1 text-white gap-8 sm:gap-0' >
+                <div className='flex sm:flex-row flex-col justify-between items-start flex-1 text-white gap-16 sm:gap-0' >
                     <div className='flex flex-col flex-[0.6]' >
                         <h3 className='small-heading mb-8' >Subscribe to our newsletter to stay in touch with the latest.</h3>
 
@@ -59,19 +59,19 @@ const Footer = () => {
                     <div>
                         <ul className='flex flex-col gap-6' >
                             {Options.map((option , index) =>
-                                <li className='small-heading'key={index} >
-                                    <Link href="#" className='text-left' > <CustomButton text={option.title}/> </Link>
+                                <li className='font-medium text-[1.25rem] sm:text-[2rem]'key={index} >
+                                    <Link href="#" className='text-left text-grey-2' > <CustomButton text={option.title}/> </Link>
                                 </li>)}
                         </ul>
                     </div>
 
                     <div className='flex flex-col gap-14' >
                         <div>
-                            <h3 className='small-heading uppercase mb-6' > Drop us a line </h3>
-                            <p className='text-grey-3' > Inquiry@halo-lab.com </p>
+                            <h3 className='small-heading uppercase mb-4 md:mb-6' > Drop us a line </h3>
+                            <Link href="mailto:connect@pantharinfohub.com" className='text-grey-3' > connect@pantharinfohub.com </Link>
                         </div>
                         <div>
-                            <h3 className='small-heading uppercase mb-6' > Call Us </h3>
+                            <h3 className='small-heading uppercase mb-4 md:mb-6' > Call Us </h3>
                             <p className='text-grey-3' > XXXXXXXXXX </p>
                         </div>
                     </div>
