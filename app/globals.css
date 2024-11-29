@@ -152,7 +152,14 @@ html {
   }
 
   .homediv {
-    @apply flex home_card bg-white/70 backdrop-blur-xl justify-evenly items-center min-h-[20rem] flex-col px-7 py-10 md:px-[4.5rem] sm:py-12 w-full overflow-hidden;
+    @apply flex mask_home_card bg-white/40 backdrop-blur-lg justify-evenly items-center h-full flex-col px-7 py-10 md:px-[4.5rem] sm:py-12 w-full overflow-hidden;
+  }
+
+  .hometest {
+    /* background: linear-gradient(45deg, #21D4FD 0%, #B721FF 100%); */
+    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-size: 300% 300%;
+    animation: color 8s ease-in-out infinite;
   }
 
   .card_li {
@@ -164,18 +171,19 @@ html {
   }
 
   .circle {
-    @apply w-8 h-8 rounded-full bg-grey-1;
+    @apply w-8 h-8 rounded-full bg-black-2;
   }
 
   .service_circle {
     @apply md:w-12 md:h-12 min-w-[2rem] min-h-[2rem] rounded-full border bg-black-hover text-grey-3 flex-center;
   }
+
   .service_circle_arrow {
-    @apply md:w-12 md:h-12 min-w-[2rem] min-h-[2rem] rounded-full border border-black-3 duration-300 transition-all ;
+    @apply md:w-12 md:h-12 min-w-[2rem] min-h-[2rem] rounded-full border border-black-3 duration-300 transition-all;
   }
 
   .achievement_circle {
-    @apply min-w-[10rem] min-h-[10rem] md:w-[12rem] md:h-[12rem] rounded-full bg-transparent;
+    @apply min-w-[8rem] min-h-[8rem] md:w-[10rem] md:h-[10rem] rounded-full bg-transparent;
   }
 
   .review_card {
@@ -204,11 +212,17 @@ html {
     background-position: 100%;
     background-repeat: no-repeat;
   }
+
   .home_card {
     background-image: url("/bg/bg-2.png");
     background-size: 100% 100%;
     background-position: 100%;
     background-repeat: no-repeat;
+  }
+
+  .mask_home_card {
+    mask-image: url("/bg/bg-2.webp");
+    mask-size: 100% 100%;
   }
 
   .mask_benefit_card {
@@ -232,13 +246,6 @@ html {
     background-image: url("/bg/service_bg.png");
     background-size: 100% 100%;
     background-position: 0 0, 0 0;
-    background-repeat: no-repeat;
-  }
-
-  .hero_first {
-    background-image: url("/bg-2.webp");
-    background-size: 100% 100%;
-    background-position: 0 0;
     background-repeat: no-repeat;
   }
 
@@ -302,28 +309,29 @@ html {
     opacity: 1;
   }
 
-  .circleBlob{
-    content: "";
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: red;
-    z-index: -1;
-  }
   .circleBlob2 {
-    content: "";
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top: 50%;  /* Use percentage or px values */
-    left: 50%; /* Use percentage or px values */
-    transform: translate(-50%, -50%); /* To center it properly */
-    background-color: red;
-    z-index: -1;
+    top: 0%;
+    left: 0%;
+    background: linear-gradient(45deg, rgba(210, 0, 26, 0.4), rgba(116, 98, 255, 0.6), #f48e31, #23d5ab);
+    background-size: 300% 300%;
+    animation: color 8s ease-in-out infinite;
+  }
+
+  @keyframes color {
+    0% {
+      background-position: 0 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0 50%;
+    }
   }
 
   /* MOBILE NAVIGATION */

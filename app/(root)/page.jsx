@@ -15,22 +15,26 @@ export default function Home() {
       <section className="home_container flex h-screen" >
         <div className="flex gap-5 flex-col md:flex-row w-full relative" >
 
-          <div className="homediv relative gap-4" >
+          <div className="relative w-full min-h-[20rem] overflow-hidden" >
+            <div className="hometest mask_home_card absolute top-0 left-0 w-full h-full" />
 
-            <h1 className="heading" >
-              <span> Enabling Secure  </span>
-              <br />
-              <span>Futures with smart tech </span>
-            </h1>
+            <div className="homediv relative gap-4 z-10" >
 
-            <div className="home_subdiv" >
-              <div className=" text-24 sm:text-30-bold uppercase" >
-                10Y Experience
-              </div>
+              <h1 className="heading" >
+                <span> Enabling Secure  </span>
+                <br />
+                <span>Futures with smart tech </span>
+              </h1>
 
-              <div className="flex items-center gap-3" >
-                <div className="circle" />
-                <Button className="bg-black-3 rounded-full text-white-1" > Let's Talk </Button>
+              <div className="home_subdiv" >
+                <div className=" text-24 sm:text-30-bold uppercase" >
+                  10Y Experience
+                </div>
+
+                <div className="flex items-center gap-3" >
+                  <div className="circle" />
+                  <Button className="bg-black-3 rounded-full text-white-1" > Let's Talk </Button>
+                </div>
               </div>
             </div>
           </div>
