@@ -105,7 +105,7 @@ html {
   }
 
   .home_container {
-    @apply md:py-10 w-[92%] m-auto;
+    @apply md:py-5 w-[92%] m-auto;
   }
 
   .card_grid {
@@ -152,12 +152,16 @@ html {
   }
 
   .homediv {
-    @apply flex mask_home_card bg-white/40 backdrop-blur-lg justify-evenly items-center h-full flex-col px-7 py-10 md:px-[4.5rem] sm:py-12 w-full overflow-hidden;
+    @apply flex mask_home_card bg-white/60 backdrop-blur-lg justify-evenly items-center h-full flex-col px-7 py-10 md:px-[4.5rem] sm:py-12 w-full overflow-hidden;
+  }
+ 
+  .service_div {
+    @apply flex mask_service_card bg-white/60 backdrop-blur-lg overflow-hidden;
   }
 
-  .hometest {
-    /* background: linear-gradient(45deg, #21D4FD 0%, #B721FF 100%); */
-    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  .bg_gradient {
+    background: linear-gradient(45deg, #21d5fda5 0%, #b921ffa5 100%);
+    /* background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
     background-size: 300% 300%;
     animation: color 8s ease-in-out infinite;
   }
@@ -222,6 +226,10 @@ html {
 
   .mask_home_card {
     mask-image: url("/bg/bg-2.webp");
+    mask-size: 100% 100%;
+  }
+  .mask_service_card {
+    mask-image: url("/bg/service_bg.png");
     mask-size: 100% 100%;
   }
 

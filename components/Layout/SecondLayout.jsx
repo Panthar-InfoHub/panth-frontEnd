@@ -40,10 +40,10 @@ const SecondLayout = () => {
                             <Image src="/icons/google.png" fill alt='icons' />
                         </Link>
                         <Link href="#" className='achievement_circle relative'  >
-                            <Image src="/icons/international.png" fill alt='icons' />
+                            <Image src="/icons/news18.png" fill alt='icons' />
                         </Link>
                         <Link href="#" className='achievement_circle relative'  >
-                            <Image src="/icons/international.png" fill alt='icons' />
+                            <Image src="/icons/rise.png" fill alt='icons' />
                         </Link>
                         
                     </div>

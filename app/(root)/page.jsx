@@ -6,8 +6,6 @@ import ReviewLayout from "@/components/Layout/ReviewLayout";
 import SecondLayout from "@/components/Layout/SecondLayout";
 import ServicesLayout from "@/components/Layout/ServicesLayout";
 import { Button } from "@/components/ui/button";
-// import Video from 'next-video';
-// import surakSha from '@/videos/suraksha.mp4';
 
 export default function Home() {
   return (
@@ -16,9 +14,9 @@ export default function Home() {
         <div className="flex gap-5 flex-col md:flex-row w-full relative" >
 
           <div className="relative w-full min-h-[20rem] overflow-hidden" >
-            <div className="hometest mask_home_card absolute top-0 left-0 w-full h-full" />
+            <div className="bg_gradient mask_home_card absolute top-0 left-0 w-full h-full" />
 
-            <div className="homediv relative gap-4 z-10" >
+            <div className="homediv relative gap-4" >
 
               <h1 className="heading" >
                 <span> Enabling Secure  </span>

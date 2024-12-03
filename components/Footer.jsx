@@ -72,7 +72,7 @@ const Footer = () => {
                         </div>
                         <div>
                             <h3 className='small-heading uppercase mb-4 md:mb-6' > Call Us </h3>
-                            <p className='text-grey-3' > XXXXXXXXXX </p>
+                            <p className='text-grey-3' > +91 6393957916 </p>
                         </div>
                     </div>
                 </div>
