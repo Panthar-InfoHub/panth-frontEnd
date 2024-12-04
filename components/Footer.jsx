@@ -32,16 +32,16 @@ const Footer = () => {
 
     const SocialIcons = [
         {
-            icon: <Linkedin className='size-6' />,
+            icon: <Linkedin className='size-4 sm:size-6' />,
         },
         {
-            icon: <Twitter className='size-6' />,
+            icon: <Twitter className='size-4 sm:size-6' />,
         },
         {
-            icon: <Instagram className='size-6' />,
+            icon: <Instagram className='size-4 sm:size-6' />,
         },
         {
-            icon: <Facebook className='size-6' />,
+            icon: <Facebook className='size-4 sm:size-6' />,
         },
     ]
 
@@ -84,7 +84,7 @@ const Footer = () => {
 
                 <div className='flex gap-6 mt-2' >
                     {SocialIcons.map((social,index) =>
-                        <Link href="#" key={index} className='rounded-full text-white border-2 border-white p-4 hover:bg-white-1 hover:text-black-2 transition-all duration-200' >
+                        <Link href="#" key={index} className='rounded-full text-white border-2 border-white p-2 sm:p-4 hover:bg-white-1 hover:text-black-2 transition-all duration-200' >
                             {social.icon}
                         </Link>
                     )}

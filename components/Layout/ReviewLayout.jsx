@@ -4,8 +4,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
+import { Star, StarHalf } from 'lucide-react';
+import { useState } from 'react';
+import Image from 'next/image';
 
 const ReviewLayout = () => {
+
+    const [expandedReview, setExpandedReview] = useState(null);
+
+    const toggleReview = (index) => {
+        setExpandedReview(expandedReview === index ? null : index);
+    };
 
     return (
         <section className='section_container' >
@@ -34,17 +43,20 @@ const ReviewLayout = () => {
                                 <div className='flex gap-2 pb-4 md:pb-8 items-center border-b border-b-black-hover' >
                                     <div className='text-xl-medium' > {review.rating} </div>
                                     <div className='flex gap-1' >
-                                        {Array(review.rating).fill(0).map((_, index) => (
-                                            <span key={index} className='text-[1rem]' > ⭐ </span>
+                                        {Array(Math.floor(review.rating)).fill(0).map((_, index) => (
+                                            <span key={index} className='text-[1rem]'> <Star className='text-yellow-300 fill-yellow-300' /> </span>
                                         ))}
+                                        {review.rating % 1 !== 0 && <span className='text-[1rem]'> <StarHalf className='text-yellow-300 fill-yellow-300' /> </span>}
                                     </div>
                                 </div>
-                                <p className='text-xl-medium mt-4' > {review.text} </p>
+                                <p className={`text-xl-medium mt-4 ${expandedReview === index ? 'line-clamp-none' : 'line-clamp-6'} `} onClick={() => toggleReview(index)}   > {review.text} </p>
                             </div>
 
                             {/* AUTHOR */}
                             <div className='flex gap-3 md:gap-6 items-center' >
-                                <img src="/user/user-1.jpeg" alt='author' className='author_pfp' />
+                                <div className='author_pfp relative' >
+                                    <Image src={review.author.image} fill alt='author' className='rounded-full' />
+                                </div>
                                 <div>
                                     <h3 className='text-xl-medium' > {review.author.name} </h3>
                                     <p className='text-small-medium' > {review.author.designation} </p>

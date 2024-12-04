@@ -7,7 +7,7 @@ import Link from 'next/link'
 const SecondLayout = () => {
     const text = "To establish a robust foundation for innovation and creativity, we commence our journey with a comprehensive discovery phase, setting the stage for unparalleled excellence."
     return (
-        <section className='section_container' >
+        <section className='section_container mt-8' >
             <div className='flex-center flex-col w-full' >
                 <div className='flex flex-col-reverse sm:flex-row mb-32 w-full' >
                     <div className='flex flex-col gap-4 mt-7 md:mt-0' >

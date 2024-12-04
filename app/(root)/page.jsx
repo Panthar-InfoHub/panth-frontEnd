@@ -26,7 +26,7 @@ export default function Home() {
 
               <div className="home_subdiv" >
                 <div className=" text-24 sm:text-30-bold uppercase" >
-                  10Y Experience
+                  5Y Experience
                 </div>
 
                 <div className="flex items-center gap-3" >
