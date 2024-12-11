@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import LenisDiv from "@/lib/LenisDiv";
 
@@ -7,6 +8,7 @@ export default function RootLayout({ children }) {
             <main className="pt-2 bg-[#FAF9F6] flex flex-col gap-5 w-screen overflow-hidden" >
                 <Navbar />
                 {children}
+                <Footer />
             </main>
         </LenisDiv>
     )

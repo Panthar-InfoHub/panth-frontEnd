@@ -1,10 +1,10 @@
-import { Roboto_Slab } from "next/font/google";
+import { Lexend } from "next/font/google";
 import "./globals.css";
 
-const Poppin = Roboto_Slab({
+const UbuntuFont = Lexend({
   subsets: ['latin'],
   variable: "--font-poppins",
-  weight: ["200", "300", '400', "500", '600', "700"],
+  weight: ["200", "300", '400', "500", "600", "700"],
 });
 
 
@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${Poppin.variable} antialiased`} >
+      <body className={`${UbuntuFont.variable} antialiased`} >
         {children}
       </body>
     </html>

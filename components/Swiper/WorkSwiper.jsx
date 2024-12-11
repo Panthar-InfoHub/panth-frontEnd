@@ -15,8 +15,8 @@ export const WorkSwiper = ({ swiperRef }) => {
             }
         },
         {
-            title: "COMMING SOON",
-            text: "COMMING SOON.........."
+            title: "Coming Soon",
+            text: "Coming Soon.........."
         },
     ]
     return (

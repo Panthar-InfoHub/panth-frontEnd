@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-poppins: 'Roboto Slab';
+  --font-poppins: "Lexend";
 }
 
 body::-webkit-scrollbar {
@@ -11,7 +11,7 @@ body::-webkit-scrollbar {
 }
 
 html {
-  font-family: var(--font-poppins), sans-serif;
+  font-family: var(--font-poppins);
 }
 
 @layer utilities {
@@ -49,7 +49,7 @@ html {
   }
 
   .text-large-medium {
-    @apply font-medium text-2xl;
+    @apply font-medium text-xl md:text-2xl;
   }
 
   .text-xl-medium {
@@ -81,7 +81,7 @@ html {
   }
 
   .heading {
-    @apply uppercase font-bold text-black-3 sm:text-[3rem] sm:leading-[1.3] md:text-[4.5rem] text-[2.5rem] leading-[1];
+    @apply uppercase font-semibold text-black-3 sm:text-[3rem] sm:leading-[1.3] md:text-[5.75rem] text-[2.5rem] leading-[1] tracking-[-0.2rem];
   }
 
   .main_heading {
@@ -97,7 +97,7 @@ html {
   }
 
   .small-heading {
-    @apply font-medium text-[1.5rem] md:text-[2rem] break-words;
+    @apply font-medium text-[1.25rem] md:text-[1.5rem] break-words tracking-[-0.1rem];
   }
 
   .section_container {
@@ -148,13 +148,13 @@ html {
   }
 
   .footer_input {
-    @apply flex-1 px-3 py-4 rounded-3xl font-semibold placeholder:font-semibold placeholder:text-grey-3 w-full h-auto outline-none;
+    @apply flex-1 px-3 py-4 rounded-3xl font-semibold placeholder:font-semibold placeholder:text-grey-3 bg-transparent border-2 border-white-1 w-full h-auto outline-none;
   }
 
   .homediv {
-    @apply flex mask_home_card bg-white/60 backdrop-blur-lg justify-evenly items-center h-full flex-col px-7 py-10 md:px-[4.5rem] sm:py-12 w-full overflow-hidden;
+    @apply flex mask_home_card bg-white/60 backdrop-blur-lg justify-evenly items-center h-full flex-col px-7 pt-10 pb-4 md:px-[4.5rem] sm:py-16 w-full overflow-hidden;
   }
- 
+
   .service_div {
     @apply flex mask_service_card bg-white/60 backdrop-blur-lg overflow-hidden;
   }
@@ -175,7 +175,7 @@ html {
   }
 
   .circle {
-    @apply w-8 h-8 rounded-full bg-black-2;
+    @apply w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black-hover;
   }
 
   .service_circle {
@@ -217,17 +217,19 @@ html {
     background-repeat: no-repeat;
   }
 
+  /* 
   .home_card {
     background-image: url("/bg/bg-2.png");
     background-size: 100% 100%;
     background-position: 100%;
     background-repeat: no-repeat;
-  }
+  } */
 
   .mask_home_card {
     mask-image: url("/bg/bg-2.webp");
     mask-size: 100% 100%;
   }
+
   .mask_service_card {
     mask-image: url("/bg/service_bg.png");
     mask-size: 100% 100%;
@@ -305,7 +307,7 @@ html {
   }
 
   .hover_parent_btn {
-    transform: rotateX(90deg);
+    transform: rotateX(90deg) !important;
   }
 
   .hover_first_animate_btn {
@@ -358,13 +360,13 @@ html {
 
   .hamBurger:hover:before {
     transform: translateY(12px) rotate(135deg);
-    background: white;
+    background: #1F2127;
     position: relative;
     z-index: 1;
   }
 
   .hamBurger:hover:after {
-    background: white;
+    background: #1F2127;
     transform: translateY(-12px) rotate(-135deg);
   }
 
