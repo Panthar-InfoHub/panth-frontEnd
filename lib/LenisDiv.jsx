@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 
 const LenisDiv = ({ children }) => {
     useEffect(() => {
-        const lenis = new Lenis();
+        const lenis = new Lenis({ lerp: 0.1 });
 
         // Use requestAnimationFrame to continuously update the scroll
         function raf(time) {

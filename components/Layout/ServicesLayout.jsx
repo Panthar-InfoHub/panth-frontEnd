@@ -4,7 +4,7 @@ import { LayoutDashboard, MoveUpRight } from "lucide-react"
 
 const ServicesLayout = () => {
   return (
-    <section className='section_container h-auto relative w-full' >
+    <section className='section_container h-auto relative w-full' id="servicesSection" >
       <div className="relative w-full min-h-[20rem] overflow-hidden" >
         <div className="bg_gradient mask_service_card absolute top-0 left-0 w-full h-full" />
         <div className="service_div p-4 pt-8 md:p-10 flex-col h-full" >

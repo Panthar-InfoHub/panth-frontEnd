@@ -9,7 +9,7 @@ const OurWorkLayout = () => {
     const swiperRef = useRef(null);
 
     return (
-        <section className='section_container h-auto relative w-full' >
+        <section className='section_container h-auto relative w-full' id='workSection' >
             <div className="service_bg p-4 pt-8 md:p-10" >
 
                 <div >
