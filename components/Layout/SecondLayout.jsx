@@ -16,7 +16,9 @@ const SecondLayout = () => {
                             {users.map((user, index) => (
                                 <Dialog key={index} >
                                     <DialogTrigger className='' >
-                                        <Image src={user.icon} alt='user' width={64} height={64} className='rounded-full ' />
+                                        <div>
+                                            <Image src={user.icon} alt='user' width={64} height={64} className='rounded-full ' />
+                                        </div>
                                     </DialogTrigger>
 
                                     <DialogContent className=" min-w-[80%] sm:min-w-[40%] outline-none" >
@@ -30,14 +32,13 @@ const SecondLayout = () => {
                                             </div>
                                         </DialogHeader>
 
-                                        <div className='mt-8' >
+                                        <div className='' >
                                             <div>
                                                 <p className='text-sm text-grey-1' > {user.description} </p>
                                             </div>
                                         </div>
                                     </DialogContent>
-                                </Dialog>
-                            ))}
+                                </Dialog>))}
                         </div>
 
                         <div className='text-xl-medium uppercase' >

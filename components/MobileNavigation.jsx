@@ -77,7 +77,7 @@ const MobileNavigation = () => {
 
                                     return (
                                         <motion.div key={index} initial="initial" animate="open" className='overflow-hidden' >
-                                            <Link href="#" className='!text-4xl'>
+                                            <Link href={item.link} className='!text-4xl'>
                                                 <CustomButton text={item.name} variants={linkVariant} />
                                             </Link>
                                         </motion.div>

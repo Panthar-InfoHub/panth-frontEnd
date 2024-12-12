@@ -95,13 +95,16 @@ html {
   .sub-heading {
     @apply font-medium text-[2rem] sm:text-[4rem] text-center break-words;
   }
+  .div-heading {
+    @apply font-medium text-[1.5rem] sm:text-[2.5rem] text-center break-words;
+  }
 
   .small-heading {
     @apply font-medium text-[1.25rem] md:text-[1.5rem] break-words tracking-[-0.1rem];
   }
 
   .section_container {
-    @apply py-10 max-w-[90%] mx-auto;
+    @apply py-10 max-w-[90%] mx-auto overflow-hidden;
   }
 
   .home_container {
@@ -187,7 +190,7 @@ html {
   }
 
   .achievement_circle {
-    @apply min-w-[8rem] min-h-[8rem] md:w-[10rem] md:h-[10rem] rounded-full bg-transparent;
+    @apply w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] rounded-full bg-transparent;
   }
 
   .review_card {

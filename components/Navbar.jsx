@@ -19,7 +19,7 @@ const Navbar = () => {
           <div className="flex items-center justify-evenly text-black-1 flex-1">
             {navItem.map((item, index) => (
 
-              <Link href="#" key={index} >
+              <Link href={item.link || "#workSection"} key={index} >
                 <CustomButton text={item.name} />
               </Link>
             ))}
