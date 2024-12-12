@@ -91,7 +91,7 @@ const Footer = () => {
                         </div>
                         <div>
                             <h3 className='small-heading uppercase mb-4 md:mb-6  !tracking-[0]' > Call Us </h3>
-                            <p className='text-grey-3' > +91 6393957916 </p>
+                            <Link href="tel:6393957916" className='text-grey-3' > +91 6393957916 </Link>
                         </div>
                     </div>
                 </div>

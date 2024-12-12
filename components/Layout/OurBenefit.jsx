@@ -49,9 +49,9 @@ const OurBenefit = () => {
                     </div>
 
                     {/* SWIPER */}
-                    <Swiper spaceBetween={30} slidesPerView={1.5} className='w-full h-auto flex-1 md:flex-[0.7] !mx-0 ' >
+                    <Swiper spaceBetween={30} slidesPerView={1.5} className='w-full h-auto flex-1 md:flex-[0.7] !mx-0 ' loop={true} >
                         {benefits.map((benefit, index) => (
-                            <SwiperSlide key={index} className='relative max-w-[22rem] min-w-[15rem]'  >
+                            <SwiperSlide key={index} className='relative max-w-[22rem] min-w-[15rem] !w-[16rem] sm:!w-auto'  >
                                 <div className="benefit_card">
                                     <div className='flex gap-4 pb-6 border-b-2 border-b-grey-1 mb-8' >
                                         <div className='benefit_heading' > {benefit.title} </div>
