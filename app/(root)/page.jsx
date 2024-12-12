@@ -27,7 +27,7 @@ export default function Home() {
 
               <div className="home_subdiv" >
                 <div className=" text-24 sm:text-30-bold uppercase text-black-3" >
-                  5Y Experience
+                  5 Year Experience
                 </div>
 
                 <Link href="tel:6393957916" className="flex items-center gap-3" >

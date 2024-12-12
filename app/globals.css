@@ -198,7 +198,7 @@ html {
   }
 
   .benefit_card {
-    @apply p-6 md:p-10 mask_benefit_card flex flex-col w-full h-full min-h-[15rem] cursor-grab;
+    @apply  p-6 md:p-10 mask_benefit_card flex flex-col w-full h-full min-h-[15rem] cursor-grab;
   }
 
   .discuss_card {
