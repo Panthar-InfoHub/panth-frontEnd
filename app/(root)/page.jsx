@@ -5,6 +5,7 @@ import ReviewLayout from "@/components/Layout/ReviewLayout";
 import SecondLayout from "@/components/Layout/SecondLayout";
 import ServicesLayout from "@/components/Layout/ServicesLayout";
 import { Button } from "@/components/ui/button";
+import { Vortex } from "@/components/ui/vortex";
 import { PhoneCall } from "lucide-react";
 import Link from "next/link";
 
@@ -15,29 +16,34 @@ export default function Home() {
         <div className="flex gap-5 flex-col md:flex-row w-full relative" >
 
           <div className="relative w-full min-h-[20rem] overflow-hidden" >
-            <div className="bg_gradient mask_home_card absolute top-0 left-0 w-full h-full" />
+            <Vortex
+              backgroundColor="black"
+              className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
+            >
+              {/* <div className="bg_gradient mask_home_card absolute top-0 left-0 w-full h-full" /> */}
 
-            <div className="homediv relative gap-4" >
+              <div className="homediv relative gap-4" >
 
-              <h1 className="heading " >
-                <span> Shaping the Future With </span>
-                <br />
-                <span className="mt-6" > smart tech </span>
-              </h1>
+                <h1 className="heading " >
+                  <span> Shaping the Future With </span>
+                  <br />
+                  <span className="mt-6" > smart tech </span>
+                </h1>
 
-              <div className="home_subdiv" >
-                <div className=" text-24 sm:text-30-bold uppercase text-black-3" >
-                  5 Year Experience
-                </div>
-
-                <Link href="tel:6393957916" className="flex items-center gap-3" >
-                  <div className="circle flex justify-center items-center " >
-                    <PhoneCall className="text-white size-4 sm:size-5" />
+                <div className="home_subdiv" >
+                  <div className=" text-24 sm:text-30-bold uppercase text-black-3" >
+                    5 Year Experience
                   </div>
-                  <Button className="bg-black-3 rounded-full text-white-1" > Let's Talk </Button>
-                </Link>
+
+                  <Link href="tel:6393957916" className="flex items-center gap-3" >
+                    <div className="circle flex justify-center items-center " >
+                      <PhoneCall className="text-white size-4 sm:size-5" />
+                    </div>
+                    <Button className="bg-black-3 rounded-full text-white-1" > Let's Talk </Button>
+                  </Link>
+                </div>
               </div>
-            </div>
+            </Vortex>
           </div>
 
           {/* // HOME SECOND DIV */}
