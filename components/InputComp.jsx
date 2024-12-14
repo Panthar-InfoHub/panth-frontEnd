@@ -1,4 +1,5 @@
 'use client'
+import { Loader } from 'lucide-react';
 import React, { useState } from 'react'
 
 const InputComp = () => {
@@ -29,8 +30,9 @@ const InputComp = () => {
         }
     }
     return (
-        <form onSubmit={handleSubmit} >
-            <input disabled={loading} className="footer_input" placeholder="Your email address" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <form onSubmit={handleSubmit} className={`flex gap-1 border border-white-1 rounded-3xl items-center justify-center ${loading && "bg-black-hover"} `} >
+            <input disabled={loading} className="footer_input rounded-3xl disabled:bg-black-hover disabled:cursor-not-allowed" placeholder="Your email address" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            {loading && <Loader className='animate-spin' />}
         </form>
     )
 }

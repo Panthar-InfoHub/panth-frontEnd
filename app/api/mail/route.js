@@ -3,7 +3,6 @@ import nodemailer from 'nodemailer';
 export async function POST(request) {
   try {
     const body = await request.json();
-    console.log(body)
     const { recipientEmail } = body;
 
     // Configure Nodemailer
@@ -19,16 +18,16 @@ export async function POST(request) {
     const mailOptionsSender = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
-      subject: `Copy of Your Email`,
-      text: `${recipientEmail}: Applied for Testing `,
+      subject: `Copy of Email`,
+      text: `${recipientEmail}: Connected you through PantharInfo Hub `,
     };
 
     // Email for recipient
     const mailOptionsRecipient = {
       from: process.env.EMAIL_USER,
       to: recipientEmail,
-      subject: "Tester For Suraksha Kawach",
-      text: "You will be notified soon",
+      subject: "Thank You For Visitng Panthar Info Hub",
+      text: "Thank You for contacting us! You will be notified Soon!",
     };
 
     // Send both emails
