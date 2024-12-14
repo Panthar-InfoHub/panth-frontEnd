@@ -5,6 +5,7 @@ import ReviewLayout from "@/components/Layout/ReviewLayout";
 import SecondLayout from "@/components/Layout/SecondLayout";
 import ServicesLayout from "@/components/Layout/ServicesLayout";
 import { Button } from "@/components/ui/button";
+import { Vortex } from "@/components/ui/vortex";
 import { PhoneCall } from "lucide-react";
 import Link from "next/link";
 
@@ -15,6 +16,10 @@ export default function Home() {
         <div className="flex gap-5 flex-col md:flex-row w-full relative" >
 
           <div className="relative w-full min-h-[20rem] overflow-hidden" >
+            {/* <Vortex
+              backgroundColor="black"
+              className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
+            > */}
             <div className="bg_gradient mask_home_card absolute top-0 left-0 w-full h-full" />
 
             <div className="homediv relative gap-4" >
@@ -38,6 +43,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+            {/* </Vortex> */}
           </div>
 
           {/* // HOME SECOND DIV */}
