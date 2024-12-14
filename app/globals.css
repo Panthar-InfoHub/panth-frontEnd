@@ -151,7 +151,7 @@ html {
   }
 
   .footer_input {
-    @apply flex-1 px-3 py-4 rounded-3xl font-semibold placeholder:font-semibold placeholder:text-grey-3 bg-transparent border-2 border-white-1 w-full h-auto outline-none;
+    @apply flex-1 px-3 py-4 font-semibold placeholder:font-semibold placeholder:text-grey-3 bg-transparent w-full h-auto outline-none;
   }
 
   .homediv {
