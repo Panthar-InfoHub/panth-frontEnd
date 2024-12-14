@@ -1,11 +1,12 @@
 import Discuss from "@/components/Discuss";
-import Footer from "@/components/Footer";
 import OurBenefit from "@/components/Layout/OurBenefit";
 import OurWorkLayout from "@/components/Layout/OurServiceLayout";
 import ReviewLayout from "@/components/Layout/ReviewLayout";
 import SecondLayout from "@/components/Layout/SecondLayout";
 import ServicesLayout from "@/components/Layout/ServicesLayout";
 import { Button } from "@/components/ui/button";
+import { PhoneCall } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -18,21 +19,23 @@ export default function Home() {
 
             <div className="homediv relative gap-4" >
 
-              <h1 className="heading" >
-                <span> Enabling Secure  </span>
+              <h1 className="heading " >
+                <span> Shaping the Future With </span>
                 <br />
-                <span>Futures with smart tech </span>
+                <span className="mt-6" > smart tech </span>
               </h1>
 
               <div className="home_subdiv" >
-                <div className=" text-24 sm:text-30-bold uppercase" >
-                  5Y Experience
+                <div className=" text-24 sm:text-30-bold uppercase text-black-3" >
+                  5 Year Experience
                 </div>
 
-                <div className="flex items-center gap-3" >
-                  <div className="circle" />
+                <Link href="tel:6393957916" className="flex items-center gap-3" >
+                  <div className="circle flex justify-center items-center " >
+                    <PhoneCall className="text-white size-4 sm:size-5" />
+                  </div>
                   <Button className="bg-black-3 rounded-full text-white-1" > Let's Talk </Button>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -41,7 +44,7 @@ export default function Home() {
           <div className=" bg-grey-2 rounded-3xl min-h-[22rem] md:w-[40%] overflow-hidden " >
 
             <div>
-              <h3 className="small-heading p-6 uppercase" > Product Development </h3>
+              <h3 className="small-heading p-6 uppercase " > Product Development </h3>
             </div>
 
             <video autoPlay={true} muted loop className="" >
@@ -55,12 +58,11 @@ export default function Home() {
 
       <SecondLayout />
       <ServicesLayout />
-      {/* <SwiperComponent /> */}
       <ReviewLayout />
       <OurWorkLayout />
       <OurBenefit />
       <Discuss />
-      <Footer />
+
     </>
   );
 }

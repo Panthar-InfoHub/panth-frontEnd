@@ -1,5 +1,6 @@
 'use client'
 
+import { Dot } from 'lucide-react'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -41,24 +42,27 @@ const OurBenefit = () => {
                                     <Image src="/user/abhay.jpg" alt='profile' width={48} height={48} className='rounded-full' />
                                 </div>
                             </div>
-                            <p className='text-xl-medium !font-normal ' >
-                                <span className='font-semibold' > Panthar Infohub Pvt. Ltd. </span> redefines security with innovative solutions like <span className='font-semibold' > SURAKSHA KAWACH </span>, which improves family and community safety. By combining cutting-edge technology and a commitment to social impact, the company helps the government increase public safety. It is led by the world's youngest CEO and encourages creativity and change, winning global recognition for its pioneering contributions to a safer, smarter future.
+                            <p className='text-xl-medium !font-normal !leading-[2rem]' >
+                                <span className='font-semibold' > Panthar Infohub Pvt. Ltd. </span> enhances security with solutions like <span className='font-semibold' > SURAKSHA KAWACH </span>, enhances safety through advanced technology and social impact, supporting government efforts to improve public security. Led by the world's youngest CEO, the company drives innovation, earning global recognition for its contributions to a smarter, safer future
                             </p>
                         </div>
                     </div>
 
                     {/* SWIPER */}
-                    <Swiper spaceBetween={30} slidesPerView={1.5} className='w-full h-auto flex-1 md:flex-[0.7] !mx-0 ' >
+                    <Swiper spaceBetween={30} slidesPerView={1.5} className='w-full h-auto flex-1 md:flex-[0.7] !mx-0 ' loop={true} >
                         {benefits.map((benefit, index) => (
-                            <SwiperSlide key={index} className='relative max-w-[22rem] min-w-[15rem]'  >
+                            <SwiperSlide key={index} className='relative max-w-[22rem] min-w-[15rem] !w-[16rem] sm:!w-auto'  >
                                 <div className="benefit_card">
                                     <div className='flex gap-4 pb-6 border-b-2 border-b-grey-1 mb-8' >
                                         <div className='benefit_heading' > {benefit.title} </div>
                                     </div>
 
                                     <div className='flex flex-col gap-4' >
-                                        {benefit.description.map((item, index) => (
-                                            <p className='text-xl-medium' key={index} > {item.text} </p>
+                                        {benefit.description.map((item, i) => (
+                                            <div className='flex gap-2' key={i} >
+                                                {index != 0 && <span> <Dot className='rotate-[-90deg] text-2xl' /> </span>}
+                                                <p className='text-xl-medium' key={index} >  {item.text} </p>
+                                            </div>
                                         ))}
                                     </div>
                                 </div>

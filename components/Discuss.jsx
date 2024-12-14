@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import CustomButton from './CustomUi/Button'
 
 const Discuss = () => {
@@ -14,9 +15,9 @@ const Discuss = () => {
                 </div>
 
                 <div className='min-w-[14rem]' >
-                    <button className="book_btn text-white" >
+                    <Link href="tel:6393957916" className="book_btn text-white w-full flex" >
                         <CustomButton text="BOOK A CALL" />
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>
