@@ -21,7 +21,7 @@ const SecondLayout = () => {
                                         </div>
                                     </DialogTrigger>
 
-                                    <DialogContent className=" min-w-[80%] sm:min-w-[40%] outline-none" >
+                                    <DialogContent className=" min-w-[90%] sm:min-w-[40%] outline-none" >
                                         <DialogHeader className="flex justify-between" >
                                             <div>
                                                 <Image src={user.icon} alt='user' width={76} height={76} className='rounded-full ' />

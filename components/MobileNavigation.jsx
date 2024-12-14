@@ -67,7 +67,7 @@ const MobileNavigation = () => {
                     <motion.div className='fixed left-0 top-0 bg-black-2 w-full h-screen z-10 flex items-center justify-center p-10 origin-top ' variants={variants} initial="initial" animate="animate" exit="exit" >
                         <nav className='flex h-full flex-col w-full items-center' >
                             <div className='w-full flex justify-between text-gray-200' >
-                                <h1 className='text-lg' > Panther InfoHub </h1>
+                                <Link href="/" onClick={() => setIsMenuOpen(!isMenuOpen)} className='text-lg' > Panther InfoHub </Link>
                                 <button onClick={() => setIsMenuOpen(!isMenuOpen)} >
                                     <CustomButton text="Close" className="cursor-pointer !w-auto" />
                                 </button>
@@ -77,7 +77,7 @@ const MobileNavigation = () => {
 
                                     return (
                                         <motion.div key={index} initial="initial" animate="open" className='overflow-hidden' >
-                                            <Link href={item.link} className='!text-4xl'>
+                                            <Link href={item.link} onClick={() => setIsMenuOpen(!isMenuOpen)} className='!text-4xl'>
                                                 <CustomButton text={item.name} variants={linkVariant} />
                                             </Link>
                                         </motion.div>
