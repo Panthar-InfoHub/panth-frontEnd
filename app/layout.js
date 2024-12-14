@@ -1,10 +1,11 @@
 import { Roboto_Slab } from "next/font/google";
 import "./globals.css";
 
-const RobotoSlab = Roboto_Slab({
-    subsets: ['latin'],
-    variable: "--font-roboto-slab",
-    weight: ["200", "300", '400', "500", '600', "700"],
+const UbuntuFont = Lexend({
+  subsets: ['latin'],
+  variable: "--font-poppins",
+  weight: ["200", "300", '400', "500", "600", "700"],
+     main
 });
 
 export const metadata = {
@@ -72,9 +73,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-    return (
-        <html lang="en">
-        <head>
+  return (
+    <html lang="en">
+     <head>
+        main
             <meta name="description" content={metadata.description} />
             <meta name="keywords" content={metadata.keywords} />
             <meta name="author" content={metadata.author} />
@@ -83,7 +85,9 @@ export default function RootLayout({ children }) {
             <meta charSet={metadata.charset} />
             <title>{metadata.title}</title>
         </head>
-        <body className={`${RobotoSlab.variable} antialiased`}>
+      <body className={`${UbuntuFont.variable} antialiased`} >
+       
+        main
         {children}
         </body>
         </html>
