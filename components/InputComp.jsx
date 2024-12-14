@@ -30,7 +30,7 @@ const InputComp = () => {
     }
     return (
         <form onSubmit={handleSubmit} >
-            <input disabled={loading} className="footer_input" placeholder="Your email address" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input disabled={loading} className="footer_input disabled:bg-red-500" placeholder="Your email address" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </form>
     )
 }
